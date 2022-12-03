@@ -19,7 +19,7 @@ asu=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/vmess",
+      "path": "/worryfree",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -34,7 +34,7 @@ ask=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/vmess",
+      "path": "/wprryfree",
       "type": "none",
       "host": "",
       "tls": "none"
@@ -67,7 +67,7 @@ clear
 
 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;41;36m       Trial Mmess      \E[0m"
+echo -e "\E[0;41;36m       Trial Vmess      \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
@@ -79,7 +79,7 @@ echo -e "id             : ${uuid}"
 echo -e "alterId        : 0"
 echo -e "Security       : auto"
 echo -e "Network        : ws"
-echo -e "Path           : /vmess"
+echo -e "Path           : /worryfree"
 echo -e "ServiceName    : vmess-grpc"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Link TLS       : ${vmesslink1}"

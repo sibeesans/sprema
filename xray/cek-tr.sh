@@ -1,25 +1,18 @@
 #!/bin/bash
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl ipinfo.io/ip | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-exit 0
-fi
+rm /var/log/xray/access.log
+rm /var/log/xray/error.log
+systemctl restart xray
+clear
+echo -e "[ ${green}INFO${NC} ] Waiting client connection"
+sleep 20
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+ipp=$(cat /var/log/xray/access.log | grep email | awk '{print $3}' | cut -d: -f1 | tr -d 'tcp' | sort | uniq)
+cat > /root/ip.txt <<-END
+$ipp
+END
+clear
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^#&#' | cut -d ' ' -f 2`);
