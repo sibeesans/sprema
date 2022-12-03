@@ -2,28 +2,7 @@
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo "Checking VPS"
 #########################
-IZIN=$(curl -sS https://raw.githubusercontent.com/Citraloka/mp2/aio/permission/ip | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-exit 0
-fi
-#EXPIRED
-expired=$(curl -sS https://raw.githubusercontent.com/Citraloka/mp2/aio/permission/ip | grep $MYIP | awk '{print $3}')
-echo $expired > /root/expired.txt
-today=$(date -d +1day +%Y-%m-%d)
-while read expired
-do
-	exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/Citraloka/mp2/aio/permission/ip | grep $MYIP | awk '{print $3}')
-	if [[ $exp < $today ]]; then
-		Exp2="\033[1;31mExpired\033[0m"
-        else
-        Exp2=$(curl -sS https://raw.githubusercontent.com/Citraloka/mp2/aio/permission/ip | grep $MYIP | awk '{print $3}')
-	fi
-done < /root/expired.txt
-rm /root/expired.txt
-Name=$(curl -sS https://raw.githubusercontent.com/Citraloka/mp2/aio/permission/ip | grep $MYIP | awk '{print $2}')
+
 # Color Validation
 DF='\e[39m'
 Bold='\e[1m'
@@ -89,7 +68,7 @@ uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                 • SUPREME BUILT ANGGUN_VPN •                 "
+echo -e " \E[0;41;36m		AUTO SC BAGOES VPN		\E[0m"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\e[33m OS            \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m IP            \e[0m:  $IPVPS"	
@@ -98,12 +77,12 @@ echo -e "\e[33m CITY          \e[0m:  $CITY"
 echo -e "\e[33m DOMAIN        \e[0m:  $domain"	
 echo -e "\e[33m DATE & TIME   \e[0m:  $DATE2"	
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                 • SCRIPT MENU •                 "
+echo -e "                 • MENU VPN •                 "
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " [\e[36m•1\e[0m] SSH Menu"
+echo -e " [\e[36m•1\e[0m] S Menu"
 echo -e " [\e[36m•2\e[0m] Vmess Menu"
 echo -e " [\e[36m•3\e[0m] Vless Menu"
-echo -e " [\e[36m•4\e[0m] Shadowsocks Menu"
+echo -e " [\e[36m•4\e[0m] ShadowsoCKS Menu"
 echo -e " [\e[36m•5\e[0m] Trojan Menu"
 echo -e " [\e[36m•6\e[0m] System Menu"
 echo -e " [\e[36m•7\e[0m] Status Service"
