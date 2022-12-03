@@ -1,11 +1,11 @@
 #!/bin/bash
 apt install jq curl -y
-DOMAIN=xraybest.ninja
+DOMAIN=sibe-vpn.live
 #sub=$(tr </dev/urandom -dc a-z0-9 | head -c4)
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.xraybest.ninja
-CF_ID=vstunnel@gmail.com
-CF_KEY=bf2f943aba9cefaf4cc246ab198519ab15e93
+SUB_DOMAIN=${sub}.sibe-vpn.live
+CF_ID=anfuji184@gmail.com
+CF_KEY=8700ccfd51dec7e1c3c95dd44250c7891b913
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com)
 echo "Updating DNS for ${SUB_DOMAIN}..."
