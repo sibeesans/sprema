@@ -109,24 +109,24 @@ chmod 644 /root/.profile
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
+echo -e "[ ${green}INFO${NC} ] Ashiap ... File Siap Install"
 sleep 0.5
-echo -ne "[ ${green}INFO${NC} ] Check permission : "
+echo -ne "[ ${green}INFO${NC} ] Lihat Izin : "
 
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/sibeesans/sprem/aio/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/sibeesans/sprem/xyz/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-red "Tambah Domain Untuk XRAY"
+red "Tambah Domain Untuk VPS"
 echo " "
-read -rp "Input domain kamu : " -e dns
+read -rp "Input domain : " -e dns
     if [ -z $dns ]; then
         echo -e "
         Nothing input for domain!
-        Then a random domain will be created"
+        Domain acak akan dibuat"
     else
         echo "$dns" > /root/scdomain
 	echo "$dns" > /etc/xray/scdomain
@@ -138,19 +138,19 @@ read -rp "Input domain kamu : " -e dns
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH Websocket               $NC"
+echo -e "$green      Install Ssh Ws              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/Citraloka/mp2/aio/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/sibeesans/sprem/xyz/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY              $NC"
+echo -e "$green          Install Xray              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 0.5
 clear
-wget https://raw.githubusercontent.com/Citraloka/mp2/aio/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/Citraloka/mp2/aio/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/sibeesans/sprem/xyz/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/sibeesans/sprem/xyz/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -177,7 +177,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Citraloka/mp2/aio/permission/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/sibeesans/sprem/xyz/permission/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -189,7 +189,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ SUPREME BUILT ANGGUN ]-===================="
+echo "=====================-[ AUTO-SC BAGOES VPN ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -218,7 +218,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "=====================-[ SUPREME BUILT ANGGUN ]-===================="
+echo "=====================-[ AUTO-SC ]-===================="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
