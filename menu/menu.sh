@@ -67,18 +67,18 @@ tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \E[0;41;36m		AUTO SC BAGOES VPN		\E[0m"
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e  "  ╔═════════════════════════════════════════════════════════════════╗" | lolcat
+echo -e  "  ║                          ┃ PANEL MENU ┃                        ║" | lolcat
+echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e "\e[33m OS            \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m IP            \e[0m:  $IPVPS"	
 echo -e "\e[33m ASN           \e[0m:  $ISP"
 echo -e "\e[33m CITY          \e[0m:  $CITY"
 echo -e "\e[33m DOMAIN        \e[0m:  $domain"	
 echo -e "\e[33m DATE & TIME   \e[0m:  $DATE2"	
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                 • MENU VPN •                 "
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
+echo -e  "  ║                          ┃ SYSTEM MENU ┃                        ║" | lolcat
+echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e " [\e[36m•1\e[0m] S Menu"
 echo -e " [\e[36m•2\e[0m] Vmess Menu"
 echo -e " [\e[36m•3\e[0m] Vless Menu"
@@ -91,8 +91,7 @@ echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[33mClient Name \E[0m: $Name"
-echo -e " \e[33mExpired     \E[0m: $Exp2"
+echo -e " \E[0;41;36m		AUTO SC BAGOES VPN		\E[0m"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e   ""
 read -p " Select menu :  "  opt
