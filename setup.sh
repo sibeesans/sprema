@@ -135,7 +135,14 @@ read -rp "Input domain : " -e dns
 	echo $dns > /root/domain
         echo "IP=$dns" > /var/lib/ipvps.conf
     fi
-    
+
+#install Domain
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install Domain            $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 0.5
+clear
+wget https://raw.githubusercontent.com/sibeesans/sprem/xyz/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install Ssh Ws              $NC"
