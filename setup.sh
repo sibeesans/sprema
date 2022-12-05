@@ -40,9 +40,9 @@ touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
 
 
-echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
+echo -e "[ ${tyblue}NOTES${NC} ] Sebelum Mulai.. "
 sleep 0.5
-echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
+echo -e "[ ${tyblue}NOTES${NC} ] Cek Persiapan.."
 sleep 0.5
 echo -e "[ ${green}INFO${NC} ] Checking headers"
 sleep 0.5
@@ -58,18 +58,18 @@ if [ "" = "$PKG_OK" ]; then
   sleep 0.5
   echo ""
   sleep 0.5
-  echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
+  echo -e "[ ${tyblue}NOTES${NC} ] Jika Eror"
   sleep 0.5
   echo ""
   sleep 0.5
-  echo -e "[ ${tyblue}NOTES${NC} ] apt update && upgrade"
+  echo -e "[ ${tyblue}NOTES${NC} ] Berdoa"
   sleep 0.5
   echo ""
   sleep 0.5
-  echo -e "[ ${tyblue}NOTES${NC} ] After this"
+  echo -e "[ ${tyblue}NOTES${NC} ] Setelah Ini"
   sleep 0.5
-  echo -e "[ ${tyblue}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${tyblue}NOTES${NC} ] enter now"
+  echo -e "[ ${tyblue}NOTES${NC} ] Mulai Script"
+  echo -e "[ ${tyblue}NOTES${NC} ] Klik Enter"
   read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
